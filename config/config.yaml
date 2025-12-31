@@ -1,0 +1,27 @@
+project:
+  name: "ai_constrained_trading"
+  version: "1.0.0"
+  author: "AI Trading System"
+  
+constraints:
+  daily_turnover_min: 0.10
+  max_position_size: 0.05
+  max_drawdown_limit: 0.20
+  
+data:
+  update_frequency: "5min"
+  
+trading:
+  paper_trading: true
+  initial_capital: 100000
+  risk_free_rate: 0.02
+  commission: 0.001
+  
+logging:
+  level: "INFO"
+  daily_reports: true
+  
+signals:
+  rsi_overbought: 70
+  rsi_oversold: 30
+  lookback_period: 20
